@@ -15,6 +15,28 @@ Note: After env creation, the terminal may need to be restarted for the env to b
 $ make install
 ```
 
+## Scaffold
+- repo name
+  - app name
+    - db
+    - module name
+      - etl
+       - __init_.py
+       - readme.md
+      - ml
+       - __init__.py
+       - readme.md
+    - shared
+    - app.py
+  - .env
+  - .gitignore
+  - environment.yml
+  - Makefile
+  - README.md
+  - requirements.txt
+  - setup.py
+
+
 ## Packaging
 1. Execute the setup.py script using the following command:
 ```bash
@@ -38,13 +60,10 @@ $ docker-compose up -d
 ## Architecture
 
 
-## Workflo
+## Workflow
 
 
 ## TODO
 
 
 ## Existing Issues
-* Name of the script:
-    * Issue description
-    * Workaround
