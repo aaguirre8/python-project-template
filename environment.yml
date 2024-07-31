@@ -1,3 +1,0 @@
-name: env-name
-dependencies:
-  - python=3.11

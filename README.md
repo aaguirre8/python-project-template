@@ -1,69 +1,54 @@
 # python-project-template
-This is a template for python projects
+This is a template for ML application projects
 
+## Table of Contents
 
-## Setup
-1. Create and source conda env
-```bash
-$ conda env create -f environment.yml
-$ conda activate env-name
-```
-Note: After env creation, the terminal may need to be restarted for the env to be activated.
+- [Tech we use](#tech-we-use)
+- [Get started](#get-started)
+- [Usage](#usage)
 
-2. Use the Makefile to upgrade pip and to install the dependencies from the requirements.txt file
-```bash
-$ make install
-```
+## Tech we use
+- API modularization: PyNest
+- API: FastAPI
+- Frontend Framework: Streamlit
+- Storage: Atlas MongoDB
 
-## Scaffold
-- repo name
-  - app name
-    - db
-    - module name
-      - etl
-       - __init_.py
-       - readme.md
-      - ml
-       - __init__.py
-       - readme.md
-    - shared
-    - app.py
-  - .env
-  - .gitignore
-  - environment.yml
-  - Makefile
-  - README.md
-  - requirements.txt
-  - setup.py
+## Get started
 
+1. Create venv.
+    ```bash
+    python3.12 -m venv .venv
+    ```
 
-## Packaging
-1. Execute the setup.py script using the following command:
-```bash
-$ python setup.py bdist_wheel
-```
+2. Source venv
 
-## Postgres Container
-The postgres container initialize a virtual db to execute tests in the app isolated from a local env.
-To spin the container follow the instructions below:
+    Using Windows:
+    ```bash
+    .venv/Scripts/activate
+    ```
 
-1. Setup an external volume
-```bash
-$ docker volume create dbname
-```
+    Using macOS and Linux:
+    ```bash
+    source .venv/bin/activate
+    ```
 
-2. Launch Postgres DB
-```bash 
-$ docker-compose up -d
-```
+3. Install the dependencies.
+    ```bash
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
-## Architecture
+## Usage
 
+1. Run the application.
 
-## Workflow
+    Run frontend.
+    ```bash
+    streamlit run src.app.py
+    ```
 
-
-## TODO
-
-
-## Existing Issues
+    Run backend Swagger UI using uvicorn.
+    ```bash
+    uvicorn "app:app" --host "0.0.0.0" --port "80" --reload
+    ```
+    To send requests: Go to the fastapi docs and use your api endpoints - http://127.0.0.1/docs
