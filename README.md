@@ -44,7 +44,7 @@ This is a template for ML application projects
 
     Run frontend.
     ```bash
-    streamlit run src.app.py
+    streamlit run src.streamlit_app.py
     ```
 
     Run backend Swagger UI using uvicorn.
